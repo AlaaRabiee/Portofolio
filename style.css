@@ -44,6 +44,73 @@ section{
     padding: 100px 200px;
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 10px 40px; /* Reduced padding for smaller screens */
+    }
+
+    .logo a {
+        font-size: 1.5em; /* Smaller font size for logo */
+    }
+
+    .navigation a {
+        font-size: 1.2em; /* Smaller font size for navigation items */
+        padding-left: 20px; /* Reduced spacing between links */
+    }
+
+    section {
+        padding: 100px 40px; /* Adjust section padding for smaller screens */
+    }
+}
+
+/* For screens 480px or smaller (phones in portrait) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack items vertically on small screens */
+        padding: 10px 20px; /* Smaller padding */
+        align-items: flex-start; /* Align logo and navigation to the left */
+    }
+
+    .logo a {
+        font-size: 1.3em; /* Even smaller font size for logo */
+    }
+
+    .navigation {
+        width: 100%; /* Make navigation take full width */
+        display: flex;
+        justify-content: space-around; /* Spread out navigation items */
+        margin-top: 10px; /* Add some space between logo and nav */
+    }
+
+    .navigation a {
+        font-size: 1.1em; /* Smaller font size for links */
+        padding-left: 0; /* Remove padding */
+    }
+
+    section {
+        padding: 80px 20px; /* Adjust section padding for even smaller screens */
+    }
+}
+
+/* For screens 1200px or larger (large desktops) */
+@media (min-width: 1200px) {
+    header {
+        padding: 10px 300px; /* Larger padding for wide screens */
+    }
+
+    .logo a {
+        font-size: 2em; /* Larger font size for logo */
+    }
+
+    .navigation a {
+        font-size: 1.6em; /* Larger font size for navigation items */
+        padding-left: 40px; /* More space between links */
+    }
+
+    section {
+        padding: 120px 300px; /* Adjust section padding for large screens */
+    }
+}
 .main{
     width: 100%;
     min-height: 100vh;
@@ -110,6 +177,58 @@ transition: 0.7s ease;
     padding-right: 30px;
 }
 
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .main h2 {
+        font-size: 1.8em; /* Adjust font size */
+    }
+
+    .main h2 span {
+        font-size: 2em; /* Adjust font size */
+    }
+
+    .main h3 {
+        font-size: 1.5em; /* Adjust font size */
+    }
+
+    .main-btn {
+        font-size: 1em; /* Adjust font size */
+        padding: 0.8em 2em; /* Adjust padding */
+    }
+
+    .social-icons a {
+        font-size: 1.8em; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .main h2 {
+        font-size: 1.5em; /* Smaller screens */
+    }
+
+    .main h2 span {
+        font-size: 1.8em;
+    }
+
+    .main h3 {
+        font-size: 1.3em;
+    }
+
+    .main-btn {
+        font-size: 0.9em;
+        padding: 0.7em 1.8em;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+        padding-right: 15px;
+    }
+}
 #skills{
     background: url(images/blimg.jpg) no-repeat ;
     background-size: cover;
@@ -229,7 +348,7 @@ transition: 0.7s ease;
     }
 
     #skills .grid-item img {
-        width: 80%;  /* Adjust image size for mobile */
+        width: 60%;  /* Adjust image size for mobile */
         height: auto;
     }
 }
@@ -237,7 +356,7 @@ transition: 0.7s ease;
 /* Medium screens (tablets) */
 @media (max-width: 900px) {
     #skills .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        grid-template-columns:1fr; /* 2 columns on tablets */
     }
 
     #skills .grid-item {
