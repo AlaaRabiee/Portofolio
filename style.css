@@ -115,6 +115,8 @@ transition: 0.7s ease;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
 }
 .title{
     color: #740940;
@@ -124,33 +126,131 @@ transition: 0.7s ease;
     font-weight: 700;
 }
 #skills .grid-item img {
-    width: 200px;
-    height: 100px;
+    width: 100%;  /* Make images take full width of the grid item */
+    height: auto;  /* Maintain aspect ratio */
 }
-
 
 #skills .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    background-color:  #740940;
+    grid-template-columns: repeat(3, 1fr);  /* Default: 3 columns */
+    background-color: #740940;
     padding: 10px;
-  }
- #skills .grid-item {
+    gap: 10px;  /* Add space between items */
+}
+
+#skills .grid-item {
     background-color: rgba(252, 251, 214, 0.856);
-    border:  dotted  #740940 ;
+    border: dotted #740940;
     padding: 20px;
     font-size: 30px;
     color: #740940;
     text-align: center;
     transition: 0.7s ease;
+}
 
-  }
-
-  #skills .grid-item:hover{
+/* Hover effect */
+#skills .grid-item:hover {
     background-color: #740940;
     color: bisque;
     transform: scale(1.1);
-  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Media Queries for Responsiveness */
+
+/* Small screens (mobile phones) */
+@media (max-width: 600px) {
+    header {
+        padding: 10px 20px; /* Adjust padding for small screens */
+    }
+
+    .navigation a {
+        font-size: 1.2em;
+        padding-left: 10px;
+    }
+
+    #skills .grid-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    #skills .grid-item {
+        font-size: 18px;  /* Smaller font size on mobile */
+        padding: 10px;  /* Reduce padding */
+    }
+
+    #skills .grid-item img {
+        width: 80%;  /* Adjust image size for mobile */
+        height: auto;
+    }
+
+    .title {
+        font-size: 2.5em; /* Smaller font for small screens */
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+    header {
+        padding: 10px 30px; /* Adjust header padding */
+    }
+
+    .navigation a {
+        font-size: 1.3em;
+    }
+
+    #skills .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+
+    #skills .grid-item {
+        font-size: 24px;  /* Slightly smaller font size */
+        padding: 15px;  /* Adjust padding */
+    }
+
+    #skills .grid-item img {
+        width: 90%;  /* Adjust image size for tablets */
+        height: auto;
+    }
+
+    .title {
+        font-size: 3.5em; /* Slightly smaller title */
+    }
+}
+/* Small screens (mobile phones) */
+@media (max-width: 600px) {
+    #skills .grid-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    #skills .grid-item {
+        font-size: 20px;  /* Smaller font size on mobile */
+        padding: 10px;  /* Reduce padding */
+    }
+
+    #skills .grid-item img {
+        width: 80%;  /* Adjust image size for mobile */
+        height: auto;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+    #skills .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+
+    #skills .grid-item {
+        font-size: 25px;  /* Slightly smaller font size */
+        padding: 15px;  /* Adjust padding */
+    }
+
+    #skills .grid-item img {
+        width: 90%;  /* Adjust image size for tablets */
+        height: auto;
+    }
+}
+
 
   #about {
     background: url(images/blimg.jpg) no-repeat;
@@ -238,10 +338,15 @@ transition: 0.7s ease;
     #about .scholarships li {
         font-size: 1.5em;
     }
+    /* #about .education .cert-un {
+        width: 100px;
+        padding: 0;
+        margin: 0;
+    } */
 
     /* Image scaling for small screens */
     #about .cert-un {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -261,6 +366,10 @@ transition: 0.7s ease;
 
     #about .title {
         font-size: 1.5em;
+    }
+    
+    #about .cert-un {
+        width: 80%;
     }
 }
 
@@ -333,6 +442,63 @@ transform: scale(1.1);
     color:#750941; 
 }
 
+@media (max-width: 768px) {
+    .grid-container-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card {
+        width: 100%; /* Full width for smaller screens */
+        margin: 10px 0; /* Reduce margin between cards */
+    }
+
+    .project-title {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .project-category {
+        font-size: 0.7em;
+    }
+}
+
+/* For screens 480px or smaller (phones in portrait) */
+@media (max-width: 480px) {
+    .grid-container-2 {
+        grid-template-columns: 1fr; /* One card per row */
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .project-info {
+        padding: 0.5em; /* Adjust padding for smaller screens */
+    }
+
+    .project-title {
+        font-size: 0.9em; /* Further adjust font size */
+    }
+
+    .more-details {
+        font-size: 0.8em; /* Adjust size of "more details" for smaller screens */
+    }
+}
+
+/* For screens 1200px or larger (large desktops) */
+@media (min-width: 1200px) {
+    .grid-container-2 {
+        grid-template-columns: repeat(1fr, 1fr); /* 4 cards per row */
+    }
+
+    .project-card {
+        width: 22em; /* Adjust card width for larger screens */
+    }
+
+    .project-title {
+        font-size: 1.2em; /* Slightly larger font size */
+    }
+}
 #contact{
     background: url(images/blimg.jpg) no-repeat ;
     background-size: cover;
@@ -458,3 +624,53 @@ background-color: #141414;
     color: #750941;
 }
 
+@media (max-width:1023px){
+header{
+    padding: 12px 20px;
+}
+
+.navigation a{
+padding-left: 10px;
+}
+
+.title{
+    font-size: 1.8em;
+}
+
+section{
+    padding: 80px 20px;
+}
+
+.main-content h2{
+font-size:1em;
+}
+
+.main-content h3{
+    font-size:1.6em;
+}
+
+.content{
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size:0.8em;
+        }
+
+        .main-content h3{
+            font-size:1.4em;
+        }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
