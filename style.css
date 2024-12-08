@@ -9,6 +9,12 @@
     outline: none;
 }
 
+body{
+    max-height: 100svh;
+    height: 100svh;
+    max-width: 100svw;
+}
+
 header{
 background-color: rgb(65, 65, 66);
 width: 100%;
@@ -500,6 +506,7 @@ transition: 0.7s ease;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    max-width: 100%;
     
 }
 
@@ -509,6 +516,7 @@ transition: 0.7s ease;
 }
 
 .project-card{
+    max-width: 70%;
     background-color: #fff;
     border: 1px solid #fff;
     min-height: 14em;
@@ -521,7 +529,7 @@ transition: 0.7s ease;
 
 .grid-container-2{
     display: grid;
-    grid-template-columns: auto auto ;
+    grid-template-columns: 1fr 1fr;
 }
 .project-card:hover{
 transform: scale(1.1);
@@ -563,7 +571,7 @@ transform: scale(1.1);
 
 @media (max-width: 768px) {
     .grid-container-2 {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .project-card {
@@ -673,11 +681,11 @@ font-size: 1.2em;
 #contact #myForm{
     border: 1px solid rgb(235, 229, 234);
     background-color: #4d0234;
-        width: 500px;
+        width: 50%;
        padding: 30px;
     border-radius: 20px;
     margin-top: 50px;
-    height: 800px;
+    height: 100%;
 }
 
 
@@ -688,7 +696,7 @@ label{
 }
 
 input{
-     width: 400px;
+     width: 80%;
     height: 50px; 
     border: 1px solid darkmagenta;
     border-radius: 10px;
