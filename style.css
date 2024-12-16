@@ -17,7 +17,7 @@ body{
 
 header{
 background-color: rgb(65, 65, 66);
-width: 100%;
+width: 100svw;
 position: fixed;
 z-index: 9999;
 display: flex;
