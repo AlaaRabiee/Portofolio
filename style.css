@@ -16,7 +16,7 @@ body{
 }
 
 header{
-background-color: rgb(65, 65, 66);
+background-color: rgb(8, 8, 8);
 width: 100svw;
 position: fixed;
 z-index: 9999;
@@ -29,8 +29,8 @@ padding: 10px 200px;
 .logo a{
     color: #b41d6c;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.8em;
+    font-weight: 600;
+    font-size: 1.5em;
     text-decoration: none;
 }
 
@@ -73,7 +73,7 @@ section{
 @media (max-width: 480px) {
     header {
         flex-direction: column; /* Stack items vertically on small screens */
-        padding: 10px 20px; /* Smaller padding */
+        padding: 10px 30px; /* Smaller padding */
         align-items: flex-start; /* Align logo and navigation to the left */
     }
 
@@ -101,7 +101,7 @@ section{
 /* For screens 1200px or larger (large desktops) */
 @media (min-width: 1200px) {
     header {
-        padding: 10px 300px; /* Larger padding for wide screens */
+        padding: 10px 20px; /* Larger padding for wide screens */
     }
 
     .logo a {
@@ -132,6 +132,7 @@ section{
     color: #fff;
     font-size: 1.6em;
     font-weight: 700;
+    padding: 30px;
 }
 
 .main h2 span{
