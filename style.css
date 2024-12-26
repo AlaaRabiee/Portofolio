@@ -251,22 +251,24 @@ transition: 0.7s ease;
     font-weight: 700;
 }
 #skills .grid-item img {
-    width: 100%;  /* Make images take full width of the grid item */
+    width: 80%;  /* Make images take full width of the grid item */
     height: auto;  /* Maintain aspect ratio */
 }
 
 #skills .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* Default: 3 columns */
-    background-color: #740940;
+    grid-template-columns: repeat(3,1fr);  /* Default: 3 columns */
+    background-color: black;
     padding: 10px;
     gap: 10px;  /* Add space between items */
 }
 
 #skills .grid-item {
+    width: 80%;
+
     background-color: rgba(252, 251, 214, 0.856);
     border: dotted #740940;
-    padding: 20px;
+    padding: 10px;
     font-size: 30px;
     color: #740940;
     text-align: center;
@@ -287,7 +289,7 @@ transition: 0.7s ease;
 /* Small screens (mobile phones) */
 @media (max-width: 600px) {
     header {
-        padding: 10px 20px; /* Adjust padding for small screens */
+        padding: 10px; /* Adjust padding for small screens */
     }
 
     .navigation a {
@@ -305,7 +307,7 @@ transition: 0.7s ease;
     }
 
     #skills .grid-item img {
-        width: 80%;  /* Adjust image size for mobile */
+        width: 60%;  /* Adjust image size for mobile */
         height: auto;
     }
 
